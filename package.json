@@ -1,0 +1,17 @@
+{
+  "name": "js-fun-at-a-restaurant",
+  "version": "1.0.0",
+  "description": "FEM1 project working on logic-heavy javascript problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test:autorun": "nodemon --exec \"mocha\""
+  },
+  "author": "Hannah Hudson",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
