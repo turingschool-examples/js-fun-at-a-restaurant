@@ -34,21 +34,21 @@ problem.
     through the instructions in the file carefully. The exercises in this file
     will help you to complete the rest of the iterations  
 
-### 1: Complete the **TBD** tests
+### 1: Complete the **meal** tests
   - For the rest of the iterations, you will be working to build out some
     js functionality, using a test suite as your guide.  
-  - Start with the **TBD** file.  
-    - Unskip the first test in **TBD** 
-    - Run **TBD**  
+  - Start with the `meal.js` file.  
+    - Unskip the first test in `test/meal-test.js`
+    - Run `npm test test/meal-test.js`  
     - Read the error messages CAREFULLY!  
     - Make the test pass.
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
 
-### 2: Complete the **TBD** tests
-  - Unskip the first test in **TBD**, and get to work passing the tests
-  - Run **TBD** 
+### 2: Complete the **order** tests
+  - Unskip the first test in `test/order-test.js`, and get to work passing the tests
+  - Run `npm test test/order-test.js`
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
