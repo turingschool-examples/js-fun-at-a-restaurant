@@ -1,7 +1,7 @@
-const chai = require("chai");
-const assert = chai.assert;
+var chai = require("chai");
+var assert = chai.assert;
 
-const {
+var {
   nameMenuItem,
   createMenuItem,
   addIngredients,
@@ -13,18 +13,18 @@ const {
 describe("meal.js", function() {
   describe("nameMenuItem", function() {
     it("should be a function", function() {
-     assert.isFunction(nameMenuItem)
+     assert.isFunction(nameMenuItem);
     });
 
-    it("should take in a name and make a delicious name", function () {
-      var menuItemName = nameMenuItem("Pizza")
+    it.skip("should take in a name and make a delicious name", function () {
+      var menuItemName = nameMenuItem("Pizza");
       assert.equal(menuItemName, "Delicious Pizza");
     });
 
-    it("should be able to create many delicious titles", function () {
-      var burritoItem = nameMenuItem("Burrito")
-      var sushiItem = nameMenuItem("Pizza")
-      var tacoItem = nameMenuItem("Taco")
+    it.skip("should be able to create many delicious titles", function () {
+      var burritoItem = nameMenuItem("Burrito");
+      var sushiItem = nameMenuItem("Pizza");
+      var tacoItem = nameMenuItem("Taco");
 
       assert.equal(burritoItem, "Delicious Burrito");
       assert.equal(sushiItem, "Delicious Pizza");
@@ -33,26 +33,26 @@ describe("meal.js", function() {
   });
 
   describe("createMenuItem", function() {
-    it("should be a function", function () {
-      assert.isFunction(createMenuItem)
+    it.skip("should be a function", function () {
+      assert.isFunction(createMenuItem);
     });
 
-    it("should create a menu item object", function() {
-      var menuItemName = nameMenuItem("French Toast")
-      var menuItem = createMenuItem(menuItemName, 10.99, "breakfast")
+    it.skip("should create a menu item object", function() {
+      var menuItemName = nameMenuItem("French Toast");
+      var menuItem = createMenuItem(menuItemName, 10.99, "breakfast");
 
       assert.equal(menuItem.name, "Delicious French Toast");
-      assert.equal(menuItem.price, 10.99)
-      assert.equal(menuItem.type, "breakfast")
+      assert.equal(menuItem.price, 10.99);
+      assert.equal(menuItem.type, "breakfast");
     });
   });
 
   describe("addIngredients", function() {
-    it("should be a function", function () {
-      assert.isFunction(addIngredients)
+    it.skip("should be a function", function () {
+      assert.isFunction(addIngredients);
     });
 
-    it("should be able to add ingredients to an array", function() {
+    it.skip("should be able to add ingredients to an array", function() {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);
@@ -61,7 +61,7 @@ describe("meal.js", function() {
       assert.deepEqual(ingredients, ["cheese"]);
     });
 
-    it("should be able to add ingredients to an array that already contains ingredients", function() {
+    it.skip("should be able to add ingredients to an array that already contains ingredients", function() {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);
@@ -71,7 +71,7 @@ describe("meal.js", function() {
       assert.deepEqual(ingredients, ["cheese", "peppers"]);
     });
 
-    it("should only add unique ingredients", function() {
+    it.skip("should only add unique ingredients", function() {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);
@@ -84,11 +84,11 @@ describe("meal.js", function() {
   })
 
   describe("formatPrice", function() {
-    it("should be a function", function () {
+    it.skip("should be a function", function () {
       assert.isFunction(formatPrice);
     });
 
-    it("should add a dollar sign in front of the price", function () {
+    it.skip("should add a dollar sign in front of the price", function () {
       var menuItemName = nameMenuItem("French Toast");
       var menuItem = createMenuItem(menuItemName, 10.99, "breakfast");
       var initialPrice = menuItem.price;
@@ -97,7 +97,7 @@ describe("meal.js", function() {
       assert.equal(formattedPrice, "$10.99")
     });
 
-    it("should add a dollar sign in front of a different price", function () {
+    it.skip("should add a dollar sign in front of a different price", function () {
       var menuItemName = nameMenuItem("Carrot Cake");
       var menuItem = createMenuItem(menuItemName, 5.99, "dessert");
       var initialPrice = menuItem.price;
@@ -108,11 +108,11 @@ describe("meal.js", function() {
   });
 
   describe("decreasePrice", function() {
-    it("should be a function", function () {
+    it.skip("should be a function", function () {
       assert.isFunction(decreasePrice);
     });
 
-    it("should decrease the price by 10%", function() {
+    it.skip("should decrease the price by 10%", function() {
       var menuItemName = nameMenuItem("Fajitas");
       var menuItem = createMenuItem(menuItemName, 6.00, "dessert");
       var decreasedPrice = decreasePrice(menuItem.price);
@@ -122,11 +122,11 @@ describe("meal.js", function() {
   })
 
   describe("createRecipe", function() {
-    it("should be a function", function () {
+    it.skip("should be a function", function () {
       assert.isFunction(createRecipe);
     });
 
-    it("should return a recipe object", function() {
+    it.skip("should return a recipe object", function() {
       var ingredients = [];
       addIngredients("eggs", ingredients);
       addIngredients("bacon", ingredients);
