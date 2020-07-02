@@ -3,7 +3,7 @@ function nameMenuItem(food) {
 }
 
 function createMenuItem(menuItemName, price, type) {
-  menuItem = {
+  var menuItem = {
     name: menuItemName,
     price: price,
     type: type,
@@ -27,11 +27,19 @@ function decreasePrice(initalPrice) {
   return (initalPrice * 0.9 )
 }
 
+function createRecipe(title, ingredients, menuItemType) {
+  return {
+    title: title,
+    ingredients: ingredients,
+    type: menuItemType,
+  }
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
