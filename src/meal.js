@@ -19,12 +19,15 @@ function addIngredients(food, ingredients) {
   }
 }
 
+function formatPrice(initalPrice) {
+  return `$${initalPrice}`
+}
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 }
