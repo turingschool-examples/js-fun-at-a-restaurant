@@ -108,11 +108,11 @@ describe("meal.js", function() {
   });
 
   describe("decreasePrice", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(decreasePrice);
     });
 
-    it.skip("should decrease the price by 10%", function() {
+    it("should decrease the price by 10%", function() {
       var menuItemName = nameMenuItem("Fajitas");
       var menuItem = createMenuItem(menuItemName, 6.00, "dessert");
       var decreasedPrice = decreasePrice(menuItem.price);
