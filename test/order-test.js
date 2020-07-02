@@ -10,11 +10,11 @@ var {
 
 describe("order.js", function() {
   describe("takeOrder", function() {
-    it.skip("should be a function", function() {
+    it("should be a function", function() {
       assert.isFunction(takeOrder);
     });
 
-    it.skip("should add new orders to an order type list", function() {
+    it("should add new orders to an order type list", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",
@@ -117,7 +117,7 @@ describe("order.js", function() {
       assert.equal(deliveryOrders.length, 3);
       assert.deepEqual(deliveryOrders, [order1, order2, order3]);
     });
-  }); 
+  });
 
   describe("refundOrder", function() {
     it.skip("should be a function", function () {

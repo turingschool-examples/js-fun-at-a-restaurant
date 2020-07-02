@@ -1,6 +1,9 @@
+function takeOrder(orderNum, array) {
+  array.push(orderNum)
+}
 
 module.exports = {
-  // takeOrder,
+  takeOrder,
   // refundOrder,
   // listItems,
   // searchOrder
