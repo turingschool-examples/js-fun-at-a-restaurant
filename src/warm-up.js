@@ -15,24 +15,32 @@
 
 
 
-// Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make 
+// Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make
 // the inStock count double what it currently is.
+  inStock = (10 * 2);
 
-
-// Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack! 
+// Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack!
 // Use a built in math operator to decrement the inStock count by 1.
-
+ inStock = (10 * 2) -1;
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the food you chose is your favorite food or not
-
+var isFavorite = true;
 
 
 // Create a new variable named "shouldOrderMore", and use a comparison operator to
 // assign a boolean value to this variable. If "inStock" is less than 20, the
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
-
+var shouldOrderMore = orderMore();
+  orderMore() {
+    if (inStock < 20) {
+      return true;
+    }
+    else {
+      return false;
+    }
+}
 
 
 //------------------------- Conditionals -------------------------//
@@ -40,7 +48,7 @@
 
 
 // Express the following in code: If the variable "stockCount" is less than 1, log
-// the statement 'I'm going to eat some [food]!', otherwise, log the statement 
+// the statement 'I'm going to eat some [food]!', otherwise, log the statement
 // 'We need to get some more [food].'
 
 
