@@ -4,9 +4,19 @@ function takeOrder(orderNum, array) {
   }
 }
 
+function refundOrder(orderNumber, array) {
+  array.shift(orderNumber)
+}
+
+function listItems(array) {
+  var noms = [(array[0].item), (array[1].item), (array[2].item)];
+  return noms.join( ", ")
+}
+
+
 module.exports = {
   takeOrder,
-  // refundOrder,
-  // listItems,
+  refundOrder,
+  listItems,
   // searchOrder
 }

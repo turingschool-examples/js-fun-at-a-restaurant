@@ -120,11 +120,11 @@ describe("order.js", function() {
   });
 
   describe("refundOrder", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(refundOrder);
     });
 
-    it.skip("should remove an order by order number", function() {
+    it("should remove an order by order number", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",
@@ -159,11 +159,11 @@ describe("order.js", function() {
   });
 
   describe("listOrders", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(listItems);
     });
 
-    it.skip("should list out all of the order items", function() {
+    it("should list out all of the order items", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",
