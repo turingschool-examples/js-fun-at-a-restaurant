@@ -13,10 +13,16 @@ function listItems(array) {
   return noms.join( ", ")
 }
 
+function searchOrder(array, item) {
+  for (var i = 0; i < array.length; i++) {
+  return array[i].item.includes(item)
+  }
+}
+
 
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
