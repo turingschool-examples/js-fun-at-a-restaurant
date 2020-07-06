@@ -140,7 +140,7 @@ describe("restaurant.js", function() {
       assert.equal(result, "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!");
     });
 
-    it.skip("should remove a different item from the menu to update it", function () {
+    it("should remove a different item from the menu to update it", function () {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken Pizza",
@@ -172,7 +172,7 @@ describe("restaurant.js", function() {
       assert.equal(result, "No one is eating our Veggie Pizza - it has been removed from the dinner menu!");
     });
 
-    it.skip("should only remove a menu item if it is on the menu", function() {
+    it("should only remove a menu item if it is on the menu", function() {
       var arepaRestaurant = createRestaurant("Quiero Arepas");
       var error = removeMenuItem(arepaRestaurant, "Mom's Spaghetti");
 
