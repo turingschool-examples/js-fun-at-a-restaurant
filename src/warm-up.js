@@ -39,7 +39,7 @@
 
 
 
-// Express the following in code: If the variable "stockCount" is less than 1, log
+// Express the following in code: If the variable "stockCount" is greater or equal to 1, log
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement 
 // 'We need to get some more [food].'
 
@@ -73,8 +73,8 @@
 //------------------------- Objects -------------------------//
 
 // Create a new variable called "groceryStore" and assign to it an object literal with two
-// keys: name, and isOpen. The value for name should the string 'King Soopers', and
-// the value for isOpen should be true
+// keys: name, and isOpen. The value for name should the string 'King Soopers' (or your favorite grocery store), and
+// the value for isOpen should be true. Which other key value pairs would make sense to add to this object?
 
 
 
