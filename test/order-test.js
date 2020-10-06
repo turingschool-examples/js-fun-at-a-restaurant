@@ -66,14 +66,14 @@ describe("order.js", function() {
         status: "accepted"
       };
 
-      var deliveryOrders = [order1];
+      var takeOutOrders = [order1];
 
-      takeOrder(order2, deliveryOrders);
-      takeOrder(order3, deliveryOrders);
+      takeOrder(order2, takeOutOrders);
+      takeOrder(order3, takeOutOrders);
 
-      assert.equal(deliveryOrders[0], order1);
-      assert.equal(deliveryOrders[1], order2);
-      assert.equal(deliveryOrders[2], order3);
+      assert.equal(takeOutOrders[0], order1);
+      assert.equal(takeOutOrders[1], order2);
+      assert.equal(takeOutOrders[2], order3);
     });
 
     it.skip("should not be able to hold more than 3 orders at a time", function() {
@@ -156,6 +156,39 @@ describe("order.js", function() {
       assert.equal(deliveryOrders.length, 2);
       assert.deepEqual(deliveryOrders, [order2, order3])
     });
+
+    it.skip("should remove a different order by order number", function () {
+      var order1 = {
+        orderNumber: 1,
+        item: "burger",
+        price: "8.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var order2 = {
+        orderNumber: 2,
+        item: "blt sandwich",
+        price: "5.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var order3 = {
+        orderNumber: 3,
+        item: "rueben",
+        price: "8.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var deliveryOrders = [order1, order2, order3];
+
+      refundOrder(2, deliveryOrders);
+
+      assert.equal(deliveryOrders.length, 2);
+      assert.deepEqual(deliveryOrders, [order1, order3])
+    });
   });
 
   describe("listOrders", function() {
@@ -163,7 +196,7 @@ describe("order.js", function() {
       assert.isFunction(listItems);
     });
 
-    it.skip("should list out all of the order items", function() {
+    it.skip("should list out all of the order items by name", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",
@@ -221,6 +254,7 @@ describe("order.js", function() {
 
       assert.equal(searchOrder(deliveryOrders, "burger"), true);
       assert.equal(searchOrder(deliveryOrders, "sushi"), false);
+      assert.equal(searchOrder(deliveryOrders, "blt sandwich"), true);
     });
   });
 });
