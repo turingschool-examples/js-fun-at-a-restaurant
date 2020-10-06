@@ -71,7 +71,23 @@ describe("Chef (class)", function() {
     var foodConfirmation = chef.checkForFood(foodItem);
 
     assert.equal(foodConfirmation, "Yes, we're serving Cinnamon Rolls today!");
+  });
 
+  it.skip("should confirm if a different requested item is on the menu", function () {
+    var restaurant = createRestaurant("Five Star Bakery");
+    var chef = new Chef("Hannah", restaurant);
+
+    var foodItem = {
+      name: "Tart Tatin",
+      price: "6.49",
+      type: "breakfast"
+    };
+
+    addMenuItem(chef.restaurant, foodItem);
+
+    var foodConfirmation = chef.checkForFood(foodItem);
+
+    assert.equal(foodConfirmation, "Yes, we're serving Tart Tatin today!");
   });
 
   it.skip("should confirm if a requested item is not on the menu", function () {
@@ -87,5 +103,20 @@ describe("Chef (class)", function() {
     var foodConfirmation = chef.checkForFood(foodItem);
 
     assert.equal(foodConfirmation, "Sorry, we aren't serving Quiche today.");
+  });
+
+  it.skip("should confirm if a different requested item is not on the menu", function () {
+    var restaurant = createRestaurant("Best Bakery Ever");
+    var chef = new Chef("Scott", restaurant);
+
+    var foodItem = {
+      name: "Kouign Amann",
+      price: "6.49",
+      type: "breakfast"
+    };
+
+    var foodConfirmation = chef.checkForFood(foodItem);
+
+    assert.equal(foodConfirmation, "Sorry, we aren't serving Kouign Amann today.");
   });
 });
