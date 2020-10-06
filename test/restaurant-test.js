@@ -57,6 +57,38 @@ describe("restaurant.js", function() {
       assert.equal(pizzaRestaurant.menus.lunch[0], bbqPizza);
     });
 
+    it.skip("should add an item to the lunch menu if the menu already has items", function () {
+      var pizzaRestaurant = createRestaurant("Sexy Pizza");
+      var bbqPizza = {
+        name: "BBQ Chicken",
+        price: "12.49",
+        type: "lunch"
+      };
+
+      var cheesePizza = {
+        name: "Cheese",
+        price: "10.49",
+        type: "lunch"
+      };
+
+      var hawaiianPizza = {
+        name: "Hawaiian",
+        price: "12.49",
+        type: "lunch"
+      };
+
+      addMenuItem(pizzaRestaurant, bbqPizza);
+
+      assert.equal(pizzaRestaurant.menus.lunch.length, 1);
+      assert.deepEqual(pizzaRestaurant.menus.lunch, [bbqPizza]);
+
+      addMenuItem(pizzaRestaurant, cheesePizza);
+      addMenuItem(pizzaRestaurant, hawaiianPizza);
+
+      assert.equal(pizzaRestaurant.menus.lunch.length, 3);
+      assert.deepEqual(pizzaRestaurant.menus.lunch, [bbqPizza, cheesePizza, hawaiianPizza]);
+    });
+
     it.skip("should add menu items to the correct menu automatically", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
