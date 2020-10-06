@@ -205,7 +205,7 @@ describe("restaurant.js", function() {
 
     it.skip("should only remove a menu item if it is on the menu", function() {
       var arepaRestaurant = createRestaurant("Quiero Arepas");
-      var error = removeMenuItem(arepaRestaurant, "Mom's Spaghetti");
+      var error = removeMenuItem(arepaRestaurant, "Mom's Spaghetti", "lunch");
 
       assert.equal(error, "Sorry, we don't sell Mom's Spaghetti, try adding a new recipe!");
     });
