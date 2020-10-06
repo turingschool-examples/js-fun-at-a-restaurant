@@ -66,9 +66,10 @@ describe("meal.js", function() {
 
       addIngredients("cheese", ingredients);
       addIngredients("peppers", ingredients);
+      addIngredients("onion", ingredients);
 
-      assert.equal(ingredients.length, 2);
-      assert.deepEqual(ingredients, ["cheese", "peppers"]);
+      assert.equal(ingredients.length, 3);
+      assert.deepEqual(ingredients, ["cheese", "peppers", "onion"]);
     });
 
     it.skip("should only add unique ingredients", function() {
@@ -136,10 +137,28 @@ describe("meal.js", function() {
       var menuItem = createMenuItem(title, price, "breakfast");
       var menuItemType = menuItem.type;
 
-      var recipe = createRecipe(title, ingredients , menuItemType);
+      var recipe = createRecipe(title, ingredients, menuItemType);
       assert.equal(recipe.title, "Delicious Eggs & Bacon");
       assert.deepEqual(recipe.ingredients, ["eggs", "bacon"]);
       assert.equal(recipe.type, "breakfast");
+    });
+
+
+    it.skip("should return a different recipe object", function () {
+      var ingredients = [];
+      addIngredients("bread", ingredients);
+      addIngredients("cheese", ingredients);
+      addIngredients("butter", ingredients);
+
+      var title = nameMenuItem("Grilled Cheese");
+      var price = formatPrice("4.99")
+      var menuItem = createMenuItem(title, price, "lunch");
+      var menuItemType = menuItem.type;
+
+      var recipe = createRecipe(title, ingredients, menuItemType);
+      assert.equal(recipe.title, "Delicious Grilled Cheese");
+      assert.deepEqual(recipe.ingredients, ["bread", "cheese", "butter"]);
+      assert.equal(recipe.type, "lunch");
     });
   });
 });
