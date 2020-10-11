@@ -25,12 +25,11 @@ function searchOrder(deliveryOrders, name) {
   for (var i = 0; i < deliveryOrders.length; i++) {
     if (deliveryOrders[i].item === name) {
       return true
-    } else {
-      return false
-    }
   }
-}
 
+  }
+  return false
+}
 
 
 
