@@ -41,7 +41,7 @@ describe("Chef (class)", function() {
     assert.deepEqual(chef.restaurant, restaurant);
   });
 
-  it.skip("should be able to great a customer by name", function() {
+  it.skip("should be able to greet a customer by name", function() {
     var scott = new Chef("Scott");
 
     assert.equal(scott.greetCustomer("Will"), "Hello, Will!");
