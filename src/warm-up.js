@@ -51,7 +51,7 @@ if (inStock < 20){
 // Express the following in code: If the variable "stockCount" is greater or equal to 1, log
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement
 // 'We need to get some more [food].'
-var stockCount = 15
+var stockCount = 60
 
 if (stockCount >= 1){
   console.log('I \'m going to eat some ' + food + ' !')
