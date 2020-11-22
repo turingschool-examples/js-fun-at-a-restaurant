@@ -27,12 +27,18 @@ function decreasePrice(price) {
 }
 
 function createRecipe(title, ingredients, menuItemType) {
-  var recipe = {
+  return {
     title: title,
     ingredients: ingredients,
     type: menuItemType,
   }
-  return recipe
+
+  // var recipe = {
+  //   title: title,
+  //   ingredients: ingredients,
+  //   type: menuItemType,
+  // }
+  // return recipe
 }
 
 module.exports = {
