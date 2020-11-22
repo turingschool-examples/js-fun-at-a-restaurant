@@ -229,11 +229,11 @@ describe("order.js", function() {
   });
 
   describe("searchOrder", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(searchOrder);
     });
 
-    it.skip("should tell us if an order is in the list", function() {
+    it("should tell us if an order is in the list", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",

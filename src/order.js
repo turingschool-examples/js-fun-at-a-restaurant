@@ -25,10 +25,28 @@ function listItems(deliveryOrders) {
   return itemNames
 }
 
+// function searchOrder(deliveryOrders, name) {
+//   var result = false
+//   for (i = 0; i < deliveryOrders.length; i++) {
+//     if (name === deliveryOrders[i].item) {
+//        result = true
+//     }
+//  }
+//  return result
+// }
+
+function searchOrder(deliveryOrders, name) {
+  for (i = 0; i < deliveryOrders.length; i++) {
+    if (name === deliveryOrders[i].item) {
+      return true
+    }
+  }
+  return false
+}
 
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
