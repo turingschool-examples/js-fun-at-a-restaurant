@@ -7,16 +7,16 @@ var {
   addIngredients,
   formatPrice,
   decreasePrice,
-  createRecipe
+  createRecipe,
 } = require("../src/meal");
 
-describe("meal.js", function() {
-  describe("nameMenuItem", function() {
-    it("should be a function", function() {
-     assert.isFunction(nameMenuItem);
+describe("meal.js", function () {
+  describe("nameMenuItem", function () {
+    it("should be a function", function () {
+      assert.isFunction(nameMenuItem);
     });
 
-    it.skip("should take in a name and make a delicious name", function () {
+    it("should take in a name and make a delicious name", function () {
       var menuItemName = nameMenuItem("Pizza");
       assert.equal(menuItemName, "Delicious Pizza");
     });
@@ -32,12 +32,12 @@ describe("meal.js", function() {
     });
   });
 
-  describe("createMenuItem", function() {
+  describe("createMenuItem", function () {
     it.skip("should be a function", function () {
       assert.isFunction(createMenuItem);
     });
 
-    it.skip("should create a menu item object", function() {
+    it.skip("should create a menu item object", function () {
       var menuItemName = nameMenuItem("French Toast");
       var menuItem = createMenuItem(menuItemName, 10.99, "breakfast");
 
@@ -47,12 +47,12 @@ describe("meal.js", function() {
     });
   });
 
-  describe("addIngredients", function() {
+  describe("addIngredients", function () {
     it.skip("should be a function", function () {
       assert.isFunction(addIngredients);
     });
 
-    it.skip("should be able to add ingredients to an array", function() {
+    it.skip("should be able to add ingredients to an array", function () {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);
@@ -61,7 +61,7 @@ describe("meal.js", function() {
       assert.deepEqual(ingredients, ["cheese"]);
     });
 
-    it.skip("should be able to add ingredients to an array that already contains ingredients", function() {
+    it.skip("should be able to add ingredients to an array that already contains ingredients", function () {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);
@@ -72,7 +72,7 @@ describe("meal.js", function() {
       assert.deepEqual(ingredients, ["cheese", "peppers", "onion"]);
     });
 
-    it.skip("should only add unique ingredients", function() {
+    it.skip("should only add unique ingredients", function () {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);
@@ -81,10 +81,10 @@ describe("meal.js", function() {
 
       assert.equal(ingredients.length, 2);
       assert.deepEqual(ingredients, ["cheese", "peppers"]);
-    })
-  })
+    });
+  });
 
-  describe("formatPrice", function() {
+  describe("formatPrice", function () {
     it.skip("should be a function", function () {
       assert.isFunction(formatPrice);
     });
@@ -95,7 +95,7 @@ describe("meal.js", function() {
       var initialPrice = menuItem.price;
 
       var formattedPrice = formatPrice(initialPrice);
-      assert.equal(formattedPrice, "$10.99")
+      assert.equal(formattedPrice, "$10.99");
     });
 
     it.skip("should add a dollar sign in front of a different price", function () {
@@ -104,36 +104,36 @@ describe("meal.js", function() {
       var initialPrice = menuItem.price;
 
       var formattedPrice = formatPrice(initialPrice);
-      assert.equal(formattedPrice, "$5.99")
+      assert.equal(formattedPrice, "$5.99");
     });
   });
 
-  describe("decreasePrice", function() {
+  describe("decreasePrice", function () {
     it.skip("should be a function", function () {
       assert.isFunction(decreasePrice);
     });
 
-    it.skip("should decrease the price by 10%", function() {
+    it.skip("should decrease the price by 10%", function () {
       var menuItemName = nameMenuItem("Fajitas");
-      var menuItem = createMenuItem(menuItemName, 6.00, "dessert");
+      var menuItem = createMenuItem(menuItemName, 6.0, "dessert");
       var decreasedPrice = decreasePrice(menuItem.price);
 
-      assert.equal(decreasedPrice, 5.40);
-    })
-  })
+      assert.equal(decreasedPrice, 5.4);
+    });
+  });
 
-  describe("createRecipe", function() {
+  describe("createRecipe", function () {
     it.skip("should be a function", function () {
       assert.isFunction(createRecipe);
     });
 
-    it.skip("should return a recipe object", function() {
+    it.skip("should return a recipe object", function () {
       var ingredients = [];
       addIngredients("eggs", ingredients);
       addIngredients("bacon", ingredients);
 
       var title = nameMenuItem("Eggs & Bacon");
-      var price = formatPrice("10.85")
+      var price = formatPrice("10.85");
       var menuItem = createMenuItem(title, price, "breakfast");
       var menuItemType = menuItem.type;
 
@@ -143,7 +143,6 @@ describe("meal.js", function() {
       assert.equal(recipe.type, "breakfast");
     });
 
-
     it.skip("should return a different recipe object", function () {
       var ingredients = [];
       addIngredients("bread", ingredients);
@@ -151,7 +150,7 @@ describe("meal.js", function() {
       addIngredients("butter", ingredients);
 
       var title = nameMenuItem("Grilled Cheese");
-      var price = formatPrice("4.99")
+      var price = formatPrice("4.99");
       var menuItem = createMenuItem(title, price, "lunch");
       var menuItemType = menuItem.type;
 
