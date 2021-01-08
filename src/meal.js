@@ -19,11 +19,15 @@ const addIngredients = (addedIngredient, ingredients) => {
   ingredients.push(addedIngredient);
 };
 
+const formatPrice = (price) => {
+  return `$${price}`;
+};
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 };
