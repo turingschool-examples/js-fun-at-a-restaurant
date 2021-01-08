@@ -48,11 +48,11 @@ describe("meal.js", function () {
   });
 
   describe("addIngredients", function () {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(addIngredients);
     });
 
-    it.skip("should be able to add ingredients to an array", function () {
+    it("should be able to add ingredients to an array", function () {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);
@@ -61,7 +61,7 @@ describe("meal.js", function () {
       assert.deepEqual(ingredients, ["cheese"]);
     });
 
-    it.skip("should be able to add ingredients to an array that already contains ingredients", function () {
+    it("should be able to add ingredients to an array that already contains ingredients", function () {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);
@@ -72,7 +72,7 @@ describe("meal.js", function () {
       assert.deepEqual(ingredients, ["cheese", "peppers", "onion"]);
     });
 
-    it.skip("should only add unique ingredients", function () {
+    it("should only add unique ingredients", function () {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);

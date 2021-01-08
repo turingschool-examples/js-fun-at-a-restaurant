@@ -12,10 +12,17 @@ const createMenuItem = (itemName, itemPrice, itemType) => {
   return menuItem;
 };
 
+const addIngredients = (addedIngredient, ingredients) => {
+  if (ingredients.includes(addedIngredient)) {
+    return;
+  }
+  ingredients.push(addedIngredient);
+};
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
-  // addIngredients,
+  addIngredients,
   // formatPrice,
   // decreasePrice,
   // createRecipe
