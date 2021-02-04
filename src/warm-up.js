@@ -58,21 +58,20 @@ if (isFavorite) {
 
 //------------------------- Arrays -------------------------//
 
-
-// Create a new variable "vegetables" and assign it to an Array of 5 different
-// vegetables, represented by their names as Strings.
-
+// √ Create a new variable "vegetables" and assign it to an Array of 5 different
+// vegetables, √ represented by their names as Strings.
+var vegetables = ['Zucchini', 'Yellow squash', 'Red onion', 'Garlic', 'Corn'];
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
+vegetables[2];
 
-
-// Create a new variable "fruits" and assign it to an Array of 7
+// √ Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
-
+var fruits = ['Starfruit', 'Kiwi', 'Mango', 'Passion fruit', 'Pineapple', 'Coconut', 'Kumquat'];
 
 // Write the code to access the 5th element of the array, using bracket notation.
-
+fruits[3];
 
 //------------------------- Objects -------------------------//
 
