@@ -14,25 +14,28 @@ var inStock = 10;
 // Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make
 // the inStock count double what it currently is.
 var reStock = inStock * 2;
-console.log(reStock);
+inStock = reStock;
 
 // Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack!
 // Use a built in math operator to decrement the inStock count by 1.
-var oopsNeedASnack = reStock--;
+var oopsNeedASnack = inStock -=1;
 console.log(oopsNeedASnack);
-// this seems to work correctly in the console, but for some reason isn't updating in runJS
+// forgot to switch to a new branch - switched to -b "Feature/Iteration0"
 
-// Initialize a new variable "isFavorite", and assign it to a boolean value indicating
-// if the food you chose is your favorite food or not
+// Initialize a new variable "isFavorite", and assign it to a boolean value indicating if the food you chose is your favorite food or not
+var isFavorite = false;
 
-
-
-// Create a new variable named "shouldOrderMore", and use a comparison operator to
+// √ Create a new variable named "shouldOrderMore", and use a comparison operator to
 // assign a boolean value to this variable. If "inStock" is less than 20, the
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
+var shouldOrderMore = false;
 
-
+if (inStock < 20) {
+  shouldOrderMore = true;
+} else {
+  ShouldOrderMore = false;
+};
 
 //------------------------- Conditionals -------------------------//
 
