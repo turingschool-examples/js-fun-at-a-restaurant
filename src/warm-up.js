@@ -23,11 +23,11 @@ console.log(oopsNeedASnack);
 // forgot to switch to a new branch - switched to -b "Feature/Iteration0"
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating if the food you chose is your favorite food or not
-var isFavorite = false;
+var isFavorite = true;
 
 // √ Create a new variable named "shouldOrderMore", and use a comparison operator to
-// assign a boolean value to this variable. If "inStock" is less than 20, the
-// variable should be true, otherwise it should be false. You MUST use a
+// assign a boolean value to this variable. √ If "inStock" is less than 20, the
+// variable should be true, √ otherwise it should be false. √ You MUST use a
 // comparison operator.
 var shouldOrderMore = false;
 
@@ -39,20 +39,22 @@ if (inStock < 20) {
 
 //------------------------- Conditionals -------------------------//
 
+// √ Express the following in code: √ If the variable "stockCount" is greater or equal to 1, √ log the statement 'I'm going to eat some [food]!', √ otherwise, log the statement 'We need to get some more [food].'
+if (inStock >= 1) {
+  console.log(`I\'m going to eat some ${food}!`);
+} else {
+  console.log(`We need to get some more ${food}.`);
+};
 
-
-// Express the following in code: If the variable "stockCount" is greater or equal to 1, log
-// the statement 'I'm going to eat some [food]!', otherwise, log the statement
-// 'We need to get some more [food].'
-
-
-
-// Express the following in code: If the variable "isFavorite" is true,
-// log the statement 'My favorite food is [food]!'. Otherwise, log the
-// statement 'I recently ate [food]'. In either case, the value stored in
+// √ Express the following in code: √ If the variable "isFavorite" is true,
+// log the statement 'My favorite food is [food]!'. √ Otherwise, log the
+// statement 'I recently ate [food]'. √ In either case, the value stored in
 // the "food" variable should be included in the logged statement.
-
-
+if (isFavorite) {
+  console.log(`My favorite food is ${food}!`);
+} else {
+  console.log(`I recently ate ${food}.`);
+};
 
 //------------------------- Arrays -------------------------//
 
