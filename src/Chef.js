@@ -2,10 +2,10 @@ class Chef {
   constructor(name, restaurant) {
     this.name = name;
     this.restaurant = restaurant;
-    // console.log(this)
   }
+
   greetCustomer(customerName, dayTime) {
-    if (dayTime === true) {
+    if (dayTime) {
       return `Good morning, ${customerName}!`;
     } else {
       return `Hello, ${customerName}!`;
@@ -13,10 +13,14 @@ class Chef {
   }
 
   checkForFood(foodItem) {
-    // console.log(foodItem);
-    if (foodItem.name === 'Quiche' || foodItem.name === 'Kouign Amann') {
+    var menu = foodItem.type;
+    var type = foodItem.name;
+
+    if (this.restaurant.menus[menu][0] === undefined) {
       return `Sorry, we aren't serving ${foodItem.name} today.`;
-    } else {
+    }
+
+    if (foodItem.name === this.restaurant.menus[menu][0].name) {
       return `Yes, we're serving ${foodItem.name} today!`;
     }
   }
