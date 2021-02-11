@@ -78,7 +78,7 @@ describe("order.js", function() {
 
     it.skip("should not be able to hold more than 3 orders at a time", function() {
       var order1 = {
-        orderNumber: 1,
+        orderNumber: 12342,
         item: "burger",
         price: "8.99",
         orderType: "delivery",
@@ -86,7 +86,7 @@ describe("order.js", function() {
       };
 
       var order2 = {
-        orderNumber: 2,
+        orderNumber: 12472,
         item: "blt sandwich",
         price: "5.99",
         orderType: "delivery",
@@ -94,7 +94,7 @@ describe("order.js", function() {
       };
 
       var order3 = {
-        orderNumber: 3,
+        orderNumber: 3789,
         item: "rueben",
         price: "8.99",
         orderType: "delivery",
@@ -102,7 +102,7 @@ describe("order.js", function() {
       };
 
       var order4 = {
-        orderNumber: 4,
+        orderNumber: 864,
         item: "garden salad",
         price: "6.99",
         orderType: "delivery",
@@ -126,7 +126,7 @@ describe("order.js", function() {
 
     it.skip("should remove an order by order number", function() {
       var order1 = {
-        orderNumber: 1,
+        orderNumber: 1657,
         item: "burger",
         price: "8.99",
         orderType: "delivery",
@@ -134,7 +134,7 @@ describe("order.js", function() {
       };
 
       var order2 = {
-        orderNumber: 2,
+        orderNumber: 221,
         item: "blt sandwich",
         price: "5.99",
         orderType: "delivery",
@@ -142,7 +142,7 @@ describe("order.js", function() {
       };
 
       var order3 = {
-        orderNumber: 3,
+        orderNumber: 923,
         item: "rueben",
         price: "8.99",
         orderType: "delivery",
@@ -151,7 +151,7 @@ describe("order.js", function() {
 
       var deliveryOrders = [order1, order2, order3];
 
-      refundOrder(1, deliveryOrders);
+      refundOrder(1657, deliveryOrders);
 
       assert.equal(deliveryOrders.length, 2);
       assert.deepEqual(deliveryOrders, [order2, order3])
@@ -159,7 +159,7 @@ describe("order.js", function() {
 
     it.skip("should remove a different order by order number", function () {
       var order1 = {
-        orderNumber: 1,
+        orderNumber: 1241,
         item: "burger",
         price: "8.99",
         orderType: "delivery",
@@ -167,7 +167,7 @@ describe("order.js", function() {
       };
 
       var order2 = {
-        orderNumber: 2,
+        orderNumber: 2893,
         item: "blt sandwich",
         price: "5.99",
         orderType: "delivery",
@@ -175,7 +175,7 @@ describe("order.js", function() {
       };
 
       var order3 = {
-        orderNumber: 3,
+        orderNumber: 456,
         item: "rueben",
         price: "8.99",
         orderType: "delivery",
@@ -184,7 +184,7 @@ describe("order.js", function() {
 
       var deliveryOrders = [order1, order2, order3];
 
-      refundOrder(2, deliveryOrders);
+      refundOrder(2893, deliveryOrders);
 
       assert.equal(deliveryOrders.length, 2);
       assert.deepEqual(deliveryOrders, [order1, order3])
@@ -226,6 +226,41 @@ describe("order.js", function() {
 
       assert.deepEqual(items, "burger, blt sandwich, rueben");
     });
+
+    it.skip("should list out different order items by name", function () {
+      var order1 = {
+        orderNumber: 3,
+        item: "grilled cheese",
+        price: "5.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var order2 = {
+        orderNumber: 20,
+        item: "turkey and swiss",
+        price: "6.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var order3 = {
+        orderNumber: 4,
+        item: "veggie burger",
+        price: "8.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var orders1 = [order1];
+      var orders2 = [order2, order3];
+
+      var items1 = listItems(orders1);
+      var items2 = listItems(orders2);
+
+      assert.deepEqual(items1, "grilled cheese");
+      assert.deepEqual(items2, "turkey and swiss, veggie burger");
+    });
   });
 
   describe("searchOrder", function() {
@@ -235,7 +270,7 @@ describe("order.js", function() {
 
     it.skip("should tell us if an order is in the list", function() {
       var order1 = {
-        orderNumber: 1,
+        orderNumber: 1234,
         item: "burger",
         price: "8.99",
         orderType: "delivery",
@@ -243,7 +278,7 @@ describe("order.js", function() {
       };
 
       var order2 = {
-        orderNumber: 2,
+        orderNumber: 2342,
         item: "blt sandwich",
         price: "5.99",
         orderType: "delivery",
@@ -255,6 +290,60 @@ describe("order.js", function() {
       assert.equal(searchOrder(deliveryOrders, "burger"), true);
       assert.equal(searchOrder(deliveryOrders, "sushi"), false);
       assert.equal(searchOrder(deliveryOrders, "blt sandwich"), true);
+    });
+
+    it.skip("should tell us if an order is in another list", function () {
+      var order1 = {
+        orderNumber: 6357,
+        item: "mac and cheese",
+        price: "8.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var order2 = {
+        orderNumber: 65389,
+        item: "bagel and cream cheese",
+        price: "2.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var order3 = {
+        orderNumber: 99853,
+        item: "spaghetti",
+        price: "8.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var order4 = {
+        orderNumber: 23522,
+        item: "chicken parmesean",
+        price: "8.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var order5 = {
+        orderNumber: 86432,
+        item: "french toast",
+        price: "7.99",
+        orderType: "delivery",
+        status: "accepted"
+      };
+
+      var orders1 = [order1, order2];
+      var orders2 = [order2, order3, order4];
+      var orders3 = [order1, order2, order3, order4, order5]
+
+      assert.equal(searchOrder(orders1, "mac and cheese"), true);
+      assert.equal(searchOrder(orders1, "hawaiian pizza"), false);
+      assert.equal(searchOrder(orders2, "bagel and cream cheese"), true);
+      assert.equal(searchOrder(orders2, "cheese pizza"), false);
+      assert.equal(searchOrder(orders3, "bagel and cream cheese"), true);
+      assert.equal(searchOrder(orders3, "french toast"), true);
+      assert.equal(searchOrder(orders3, "breakfast burrito"), false);
     });
   });
 });

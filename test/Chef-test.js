@@ -60,22 +60,31 @@ describe("Chef (class)", function() {
     var restaurant = createRestaurant("Average Bakery");
     var chef = new Chef("Hannah", restaurant);
 
-    var foodItem = { 
+    var foodItem1 = { 
       name: "Cinnamon Rolls",
       price: "4.49",
       type: "breakfast" 
     };
 
-    addMenuItem(chef.restaurant, foodItem);
+    var foodItem2 = {
+      name: "Cherry Danishes",
+      price: "4.79",
+      type: "breakfast"
+    };
 
-    var foodConfirmation = chef.checkForFood(foodItem);
+    addMenuItem(chef.restaurant, foodItem1);
+    addMenuItem(chef.restaurant, foodItem2);
 
-    assert.equal(foodConfirmation, "Yes, we're serving Cinnamon Rolls today!");
+    var foodConfirmation1 = chef.checkForFood(foodItem1);
+    var foodConfirmation2 = chef.checkForFood(foodItem2);
+
+    assert.equal(foodConfirmation1, "Yes, we're serving Cinnamon Rolls today!");
+    assert.equal(foodConfirmation2, "Yes, we're serving Cherry Danishes today!");
   });
 
   it.skip("should confirm if a different requested item is on the menu", function () {
     var restaurant = createRestaurant("Five Star Bakery");
-    var chef = new Chef("Hannah", restaurant);
+    var chef = new Chef("Kayla", restaurant);
 
     var foodItem = {
       name: "Tart Tatin",

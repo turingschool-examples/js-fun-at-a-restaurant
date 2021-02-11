@@ -205,9 +205,11 @@ describe("restaurant.js", function() {
 
     it.skip("should only remove a menu item if it is on the menu", function() {
       var arepaRestaurant = createRestaurant("Quiero Arepas");
-      var error = removeMenuItem(arepaRestaurant, "Mom's Spaghetti", "lunch");
+      var error1 = removeMenuItem(arepaRestaurant, "Mom's Spaghetti", "lunch");
+      var error2 = removeMenuItem(arepaRestaurant, "Funfetti Cake", "breakfast");
 
-      assert.equal(error, "Sorry, we don't sell Mom's Spaghetti, try adding a new recipe!");
+      assert.equal(error1, "Sorry, we don't sell Mom's Spaghetti, try adding a new recipe!");
+      assert.equal(error2, "Sorry, we don't sell Funfetti Cake, try adding a new recipe!");
     });
   });
 });
