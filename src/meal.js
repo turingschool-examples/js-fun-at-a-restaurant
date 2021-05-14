@@ -8,9 +8,10 @@ return menuItem
 };
 
 function addIngredients(food, ingredients) {
-  if(!ingredients.includes(food))
+  if(!ingredients.includes(food)) {
   ingredients.push(food)
   return ingredients
+  }
 };
 
 function formatPrice(initialPrice) {
