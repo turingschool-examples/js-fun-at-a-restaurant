@@ -14,20 +14,21 @@ function refundOrder(orderNumber, deliveryOrders) {
 };
 
 function listItems(items) {
-var orderItem = [];
-for(var i = 0; i < items.length; i++) {
-orderItem.push(items[i].item)
-var entree = orderItem.join(', ')
-}
-return entree
+  var orderItem = [];
+  for(var i = 0; i < items.length; i++) {
+    orderItem.push(items[i].item)
+    var entree = orderItem.join(', ')
+  }
+  return entree
 };
 
 function searchOrder(deliveryOrders, entree) {
-for(var i = 0; i < deliveryOrders.length; i++) {
-  if(deliveryOrders[i].item === entree) {
-    return true
-  } else continue;
-    } return false
+  for(var i = 0; i < deliveryOrders.length; i++) {
+    if(deliveryOrders[i].item === entree) {
+      return true
+    } else continue;
+  }
+  return false
 };
 
 module.exports = {
