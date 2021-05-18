@@ -6,13 +6,9 @@ function createRestaurant(name) {
 };
 
 function addMenuItem(restaurant, menuItem) {
-  if (menuItem.type === 'lunch' && !restaurant.menus.lunch.includes(menuItem)) {
-    restaurant.menus.lunch.push(menuItem);
-  } else if(menuItem.type === 'breakfast' && !restaurant.menus.breakfast.includes(menuItem)) {
-      restaurant.menus.breakfast.push(menuItem);
-    } else if(menuItem.type === 'dinner' && !restaurant.menus.dinner.includes(menuItem)) {
-      restaurant.menus.dinner.push(menuItem)
-    }
+  if (!restaurant.menus[menuItem.type].includes(menuItem)) {
+    restaurant.menus[menuItem.type].push(menuItem);
+  }
 };
 
 function removeMenuItem(restaurant, menuItem, type) {

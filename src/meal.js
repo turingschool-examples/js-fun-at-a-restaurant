@@ -15,7 +15,7 @@ function addIngredients(food, ingredients) {
 };
 
 function formatPrice(initialPrice) {
-return `$${initialPrice}`
+  return `$${initialPrice}`
 };
 
 function decreasePrice(decreasedPrice) {
