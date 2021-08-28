@@ -3,11 +3,11 @@ function nameMenuItem(menuItemName) {
 
 }
 
-function createMenuItem() {
+function createMenuItem(name, price, type) {
   var createMenuItem = {
-  name: 'Delicious French Toast',
-  price: 10.99,
-  type: 'breakfast'
+  name: name,
+  price: price,
+  type: type
 };
   return createMenuItem;
 }
@@ -23,14 +23,36 @@ ingredients.push(foodItem);
 
 
 
-
-
-
-
-
 function formatPrice(initialPrice) {
-  return `$${initialPrice}`
+  return "$" + initialPrice;
+
+
 };
+
+
+
+
+
+function decreasePrice(initialPrice) {
+  return initialPrice - (initialPrice * 0.10);
+};
+
+
+
+
+
+function createRecipe(title, ingredients, type) {
+  return {
+    title: title,
+    ingredients: ingredients,
+    type: type
+  };
+
+};
+
+
+
+
 
 
 module.exports = {
@@ -38,6 +60,6 @@ module.exports = {
   createMenuItem,
   addIngredients,
   formatPrice,
-  // decreasePrice,
-  // createRecipe
+  decreasePrice,
+  createRecipe
 }
