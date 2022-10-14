@@ -17,13 +17,17 @@ function addMenuItem(restaurant, item) {
   } else {
     return newMenu;
   }
-}
+};
  
-function removeMenuItem(restaurant, foodType, mealTime) {
-  for (var i = 0; i < restaurant.type.length; i++) {
-    if (restaurant.menus[])
+function removeMenuItem(restaurant, foodName, type) {
+  for (var i = 0; i < restaurant.menus[type].length; i++) {
+    if (restaurant.menus[type][i].name.includes(type) === false) {
+      restaurant.menus[type].splice(i);
+      return `No one is eating our ${foodName} - it has been removed from the ${type} menu!`
+    } 
   }
-}
+      return `Sorry, we don't sell ${foodName}, try adding a new recipe!`
+};
    
   
   
