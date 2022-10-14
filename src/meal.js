@@ -1,5 +1,8 @@
-function nameMenuItem() {
-
+function nameMenuItem(name){
+  var menuItem = {
+    name: name,
+  }
+  return menuItem
 }
 
 
