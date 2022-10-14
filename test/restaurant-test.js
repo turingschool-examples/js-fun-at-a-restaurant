@@ -9,11 +9,11 @@ var {
 
 describe("restaurant.js", function() {
   describe("createRestaurant", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(createRestaurant);
     });
 
-    it.skip("should have a name", function () {
+    it("should have a name", function () {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       assert.equal(pizzaRestaurant.name, "Sexy Pizza");
     });

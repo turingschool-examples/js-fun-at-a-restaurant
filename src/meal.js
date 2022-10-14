@@ -18,7 +18,7 @@ function addIngredients(toppings, ingredients) {
 
 function formatPrice(initialPrice) {
   return `$${initialPrice}`
-}
+};
 
 function decreasePrice(price) {
   var discountPrice = price * .10
@@ -42,6 +42,6 @@ module.exports = {
   formatPrice,
   decreasePrice,
   createRecipe
-}
+};
 
 

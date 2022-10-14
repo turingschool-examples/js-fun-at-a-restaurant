@@ -1,7 +1,15 @@
 
 
+function createRestaurant(name) {
+  var restaurants = {
+    
+  }
+
+
+}
+
 module.exports = {
-  // createRestaurant, 
+  createRestaurant, 
   // addMenuItem,
   // removeMenuItem
 }
