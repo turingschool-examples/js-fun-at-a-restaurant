@@ -18,19 +18,19 @@ describe("restaurant.js", function() {
       assert.equal(pizzaRestaurant.name, "Sexy Pizza");
     });
 
-    it.skip("should be able to have a different name", function () {
+    it("should be able to have a different name", function () {
       var arepaRestaurant = createRestaurant("Quiero Arepas");
 
       assert.equal(arepaRestaurant.name, "Quiero Arepas");
     });
 
-    it.skip("should have menus", function() {
+    it("should have menus", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
 
       assert.isObject(pizzaRestaurant.menus);
     });
 
-    it.skip("should have different types of menus", function() {
+    it("should have different types of menus", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
 
       assert.deepEqual(pizzaRestaurant.menus.breakfast, []);
@@ -40,11 +40,11 @@ describe("restaurant.js", function() {
   });
 
   describe("addMenuItem", function() {
-    it.skip("should be a function", function() {
+    it("should be a function", function() {
       assert.isFunction(addMenuItem);
     });
 
-    it.skip("should add an item to the lunch menu", function() {
+    it("should add an item to the lunch menu", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken",
