@@ -29,9 +29,6 @@ function removeMenuItem(restaurant, foodName, type) {
       return `Sorry, we don't sell ${foodName}, try adding a new recipe!`
 };
    
-  
-  
-
 module.exports = {
   createRestaurant, 
   addMenuItem,
