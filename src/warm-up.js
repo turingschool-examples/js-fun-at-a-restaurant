@@ -5,14 +5,12 @@
 
 //------------------------- Variables -------------------------//
 
-
 // Initialize three new variables, "food", "type" and "inStock", and assign values to them with
 // a food's name, type and number of items in stock.
 
 var food = "Ice Cream";
 var type = "Dessert";
 var inStock = 10;
-
 
 // Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make 
 // the inStock count double what it currently is.
@@ -21,19 +19,15 @@ food = "Pasta"
 type = "Italian"
 inStock = (inStock * 2);
 
-
 // Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack! 
 // Use a built in math operator to decrement the inStock count by 1.
 
 inStock = (inStock -= 1);
 
-
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the food you chose is your favorite food or not
 
 var isFavorite = true;
-
-
 
 // Create a new variable named "shouldOrderMore", and use a comparison operator to
 // assign a boolean value to this variable. If "inStock" is less than 20, the
@@ -48,8 +42,6 @@ if (inStock < 20) {
 }
 
 //------------------------- Conditionals -------------------------//
-
-
 
 // Express the following in code: If the variable "stockCount" is greater or equal to 1, log
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement 
@@ -72,32 +64,26 @@ if (isFavorite === true) {
     return "I recently ate [food]."
 };
 
-
 //------------------------- Arrays -------------------------//
-
 
 // Create a new variable "vegetables" and assign it to an Array of 5 different
 // vegetables, represented by their names as Strings.
 
 var vegetables = ["carrots", "cucumbers", "broccoli", "peppers", "corn"];
 
-
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
 return vegetables[2];
-
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
 
 var fruits = ["strawberries", "blueberries", "peaches", "apples", "bananas", "oranges", "pears"];
 
-
 // Write the code to access the 5th element of the array, using bracket notation.
 
 return fruits[4];
-
 
 //------------------------- Objects -------------------------//
 
