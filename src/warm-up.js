@@ -14,7 +14,6 @@ var type = "Dessert";
 var inStock = 10;
 
 
-
 // Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make 
 // the inStock count double what it currently is.
 
@@ -71,8 +70,7 @@ if (isFavorite === true) {
     return "My favorite food is [food]!"
 } else {
     return "I recently ate [food]."
-}
-
+};
 
 
 //------------------------- Arrays -------------------------//
@@ -107,9 +105,14 @@ return fruits[4];
 // keys: name, and isOpen. The value for name should the string 'King Soopers' (or your favorite grocery store), and
 // the value for isOpen should be true. Which other key value pairs would make sense to add to this object?
 
-
-
-
+var groceryStore = {
+    name: 'King Soopers',
+    isOpen: true,
+    location: 'Chicago',
+    hasOrganic: true
+};
 
 // Write the code to add the key of location, with the value of 'Denver, Colorado'. Use dot
 // notation to do this. DO NOT modify your code from above.
+
+groceryStore.location = 'Denver, Colorado'
