@@ -24,10 +24,7 @@ function createRecipe(title, ingredients, menuType){
     ingredients: ingredients,
     type: menuType,
   }
-
 }
-
-
 module.exports = {
   nameMenuItem,
   createMenuItem,
