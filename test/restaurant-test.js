@@ -9,28 +9,28 @@ var {
 
 describe("restaurant.js", function() {
   describe("createRestaurant", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(createRestaurant);
     });
 
-    it.skip("should have a name", function () {
+    it("should have a name", function () {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       assert.equal(pizzaRestaurant.name, "Sexy Pizza");
     });
 
-    it.skip("should be able to have a different name", function () {
+    it("should be able to have a different name", function () {
       var arepaRestaurant = createRestaurant("Quiero Arepas");
 
       assert.equal(arepaRestaurant.name, "Quiero Arepas");
     });
 
-    it.skip("should have menus", function() {
+    it("should have menus", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
 
       assert.isObject(pizzaRestaurant.menus);
     });
 
-    it.skip("should have different types of menus", function() {
+    it("should have different types of menus", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
 
       assert.deepEqual(pizzaRestaurant.menus.breakfast, []);
