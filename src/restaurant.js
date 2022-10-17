@@ -26,10 +26,11 @@ function removeMenuItem(restaurant, foodItem, menuItem){
 //should be able to be used to delete
 //why is the for loop breaking my if statement if I try to wrap it?
 for(var i = 0; i < restaurant.menus[menuItem].length; i++)
-  if(foodItem === restaurant.menus[menuItem][i].name) {
-    restaurant.menus[menuItem].splice(i,1)
+  if(restaurant.menus[menuItem][i].name === foodItem) {
+    restaurant.menus[menuItem].splice(i,1) //same [i] . splice as used in first test
     return `No one is eating our ${foodItem} - it has been removed from the ${menuItem} menu!`
   }
+  return `Sorry, we don't sell ${foodItem}, try adding a new recipe!`
 }
 
 module.exports = {
