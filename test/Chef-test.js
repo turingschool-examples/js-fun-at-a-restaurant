@@ -8,25 +8,25 @@ var {
 
 
 describe("Chef (class)", function() {
-  it.skip('should instantiate a chef object', function () {
+  it('should instantiate a chef object', function () {
     var hannah = new Chef("Hannah");
 
     assert.instanceOf(hannah, Chef);
   });
 
-  it.skip("should have a name", function() {
+  it("should have a name", function() {
     var chef = new Chef("Hannah");
 
     assert.equal(chef.name, "Hannah");
   });
 
-  it.skip("should be able to have a different name", function () {
+  it("should be able to have a different name", function () {
     var chef = new Chef("Casey");
 
     assert.equal(chef.name, "Casey");
   });
 
-  it.skip("should work at a restaurant", function() {
+  it("should work at a restaurant", function() {
     var restaurant = createRestaurant("Best Bakery Ever");
     var chef = new Chef("Hannah", restaurant);
 

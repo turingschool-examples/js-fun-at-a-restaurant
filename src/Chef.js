@@ -1,6 +1,7 @@
 class Chef {
-  constructor() {
-    
+  constructor(name) {
+    this.name = name
+    //oh class to class practice here
   }
 }
 
