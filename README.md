@@ -27,4 +27,4 @@ problem.
   - `cd` into the project
   - run `npm install` to install the necessary dependencies
   
-  The project spec can be found [here](https://frontend.turing.io/projects/module-1/restaurant.html).
+  The project spec can be found [here](https://frontend.turing.edu/projects/module-1/restaurant.html).
