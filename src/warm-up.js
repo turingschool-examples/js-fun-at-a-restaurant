@@ -39,7 +39,7 @@ var isFavorite = true;
 // comparison operator.
 
 function shouldOrderMore() {
-  if(inStock < 20) {
+  if (inStock < 20) {
     return true;
   } else {
     return false;
@@ -58,7 +58,7 @@ function shouldOrderMore() {
 var stockCount = inStock
 
 function eat() {
-  if(stockCount >= 1){
+  if (stockCount >= 1) {
     console.log(`I'm going to eat some ${food}!`);
   } else {
     console.console.log(`We ned to get some more ${food}.`);
@@ -72,12 +72,12 @@ function eat() {
 // statement 'I recently ate [food]'. In either case, the value stored in
 // the "food" variable should be included in the logged statement.
 
-function() {
-  if(isFavorite === true) {
+function favorite() {
+  if (isFavorite === true) {
     console.log(`My favorite food is ${food}!`);
   } else {
     console.log(`I recently ate ${food}`);
-  } 
+  }
 };
 
 
@@ -88,7 +88,7 @@ function() {
 // Create a new variable "vegetables" and assign it to an Array of 5 different
 // vegetables, represented by their names as Strings.
 
-var vegetables = ["cucumber", "carrot", "radish", "garlic", "tomatos"]
+var vegetables = ["cucumber", "carrot", "radish", "garlic", "tomatoes"]
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
@@ -112,11 +112,11 @@ fruits[4]
 // the value for isOpen should be true. Which other key value pairs would make sense to add to this object?
 
 var groceryStore = {
-  name: 'King Soopers',
+  name: "King Soopers",
   isOpen: true
 }
 
 // Write the code to add the key of location, with the value of 'Denver, Colorado'. Use dot
 // notation to do this. DO NOT modify your code from above.
 
-groceryStore.location = 'Denver, Colorado'
+groceryStore.location = "Denver, Colorado"
