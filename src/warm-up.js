@@ -10,7 +10,7 @@
 
 var food = "Ice Cream";
 var type = "Dessert";
-var inStock = 10
+var inStock = 10;
 // Read the instructions for each of the warm up exercises carefully. This may
 
 
@@ -43,7 +43,7 @@ function shouldOrderMore() {
     return true;
   } else {
     return false;
-  }
+  };
 }
 
 
@@ -55,12 +55,30 @@ function shouldOrderMore() {
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement 
 // 'We need to get some more [food].'
 
+var stockCount = inStock
+
+function eat() {
+  if(stockCount >= 1){
+    console.log(`I'm going to eat some ${food}!`);
+  } else {
+    console.console.log(`We ned to get some more ${food}.`);
+  }
+};
+
 
 
 // Express the following in code: If the variable "isFavorite" is true,
 // log the statement 'My favorite food is [food]!'. Otherwise, log the
 // statement 'I recently ate [food]'. In either case, the value stored in
 // the "food" variable should be included in the logged statement.
+
+function() {
+  if(isFavorite === true) {
+    console.log(`My favorite food is ${food}!`);
+  } else {
+    console.log(`I recently ate ${food}`);
+  } 
+};
 
 
 
