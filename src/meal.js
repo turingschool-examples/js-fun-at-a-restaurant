@@ -12,8 +12,11 @@ function createMenuItem(name, price, meal) {
 
 function addIngredients(toAdd, dataVar){
   ingredients = dataVar
-  ingredients.push(toAdd)
+
+  if(!ingredients.includes(toAdd)){
+    ingredients.push(toAdd)
   }
+}
 
 
 module.exports = {
