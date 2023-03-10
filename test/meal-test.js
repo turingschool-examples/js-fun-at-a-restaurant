@@ -72,7 +72,7 @@ describe("meal.js", function() {
       assert.deepEqual(ingredients, ["cheese", "peppers", "onion"]);
     });
 
-    it.skip("should only add unique ingredients", function() {
+    it("should only add unique ingredients", function() {
       var ingredients = [];
 
       addIngredients("cheese", ingredients);

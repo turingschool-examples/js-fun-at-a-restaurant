@@ -11,12 +11,6 @@ function createMenuItem(name, price, meal) {
 }
 
 function addIngredients(toAdd, dataVar){
-  // meal = {
-  //   ingredients: dataVar
-  // }
-  // meal.ingredients.push(toAdd)
-  // console.log(meal)
-
   ingredients = dataVar
   ingredients.push(toAdd)
   }
