@@ -88,16 +88,21 @@ function() {
 // Create a new variable "vegetables" and assign it to an Array of 5 different
 // vegetables, represented by their names as Strings.
 
+var vegetables = ["cucumber", "carrot", "radish", "garlic", "tomatos"]
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
+vegetables[2]
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
 
+var fruits = ["apple", "orange", "kiwi", "banana", "mango", "cherries", "blueberries"]
 
 // Write the code to access the 5th element of the array, using bracket notation.
+
+fruits[4]
 
 
 //------------------------- Objects -------------------------//
@@ -106,7 +111,12 @@ function() {
 // keys: name, and isOpen. The value for name should the string 'King Soopers' (or your favorite grocery store), and
 // the value for isOpen should be true. Which other key value pairs would make sense to add to this object?
 
-
+var groceryStore = {
+  name: 'King Soopers',
+  isOpen: true
+}
 
 // Write the code to add the key of location, with the value of 'Denver, Colorado'. Use dot
 // notation to do this. DO NOT modify your code from above.
+
+groceryStore.location = 'Denver, Colorado'
