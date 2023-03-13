@@ -18,13 +18,21 @@ function addIngredients(toAdd, dataVar){
   }
 }
 
+function formatPrice(price){
+  return `$${price}`
+}
+
+function decreasePrice(price){
+  return (price * 90)/100  
+}
+
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
-  // decreasePrice,
+  formatPrice,
+  decreasePrice,
   // createRecipe
 }
 
