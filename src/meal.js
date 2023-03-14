@@ -26,6 +26,10 @@ function decreasePrice(price){
   return (price * 90)/100  
 }
 
+function createRecipe(){
+
+}
+
 
 module.exports = {
   nameMenuItem,
@@ -33,7 +37,7 @@ module.exports = {
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
 
 

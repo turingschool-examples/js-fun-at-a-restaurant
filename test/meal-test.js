@@ -123,7 +123,7 @@ describe("meal.js", function() {
   })
 
   describe("createRecipe", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(createRecipe);
     });
 
