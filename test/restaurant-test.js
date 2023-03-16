@@ -5,6 +5,7 @@ var {
   createRestaurant,
   addMenuItem,
   removeMenuItem,
+  checkForFood
 } = require("../src/restaurant");
 
 describe("restaurant.js", function() {
@@ -210,6 +211,77 @@ describe("restaurant.js", function() {
 
       assert.equal(error1, "Sorry, we don't sell Mom's Spaghetti, try adding a new recipe!");
       assert.equal(error2, "Sorry, we don't sell Funfetti Cake, try adding a new recipe!");
+    });
+  });
+
+  describe('checkForFood', function() {
+    it.skip("should confirm if a requested item is on the menu", function() {
+      var restaurant = createRestaurant("Average Bakery");
+  
+      var foodItem1 = { 
+        name: "Cinnamon Rolls",
+        price: "4.49",
+        type: "breakfast" 
+      };
+  
+      var foodItem2 = {
+        name: "Cherry Danishes",
+        price: "4.79",
+        type: "breakfast"
+      };
+  
+      addMenuItem(restaurant, foodItem1);
+      addMenuItem(restaurant, foodItem2);
+  
+      var foodConfirmation1 = checkForFood(restaurant, foodItem1);
+      var foodConfirmation2 = checkForFood(restaurant, foodItem2);
+  
+      assert.equal(foodConfirmation1, "Yes, we're serving Cinnamon Rolls today!");
+      assert.equal(foodConfirmation2, "Yes, we're serving Cherry Danishes today!");
+    });
+  
+    it.skip("should confirm if a different requested item is on the menu", function () {
+      var restaurant = createRestaurant("Five Star Bakery");
+  
+      var foodItem = {
+        name: "Tart Tatin",
+        price: "6.49",
+        type: "breakfast"
+      };
+  
+      addMenuItem(restaurant, foodItem);
+  
+      var foodConfirmation = checkForFood(restaurant, foodItem);
+  
+      assert.equal(foodConfirmation, "Yes, we're serving Tart Tatin today!");
+    });
+  
+    it.skip("should confirm if a requested item is not on the menu", function () {
+      var restaurant = createRestaurant("Best Bakery Ever");
+  
+      var foodItem = {
+        name: "Quiche",
+        price: "6.49",
+        type: "lunch"
+      };
+  
+      var foodConfirmation = checkForFood(restaurant, foodItem);
+  
+      assert.equal(foodConfirmation, "Sorry, we aren't serving Quiche today.");
+    });
+  
+    it.skip("should confirm if a different requested item is not on the menu", function () {
+      var restaurant = createRestaurant("Best Bakery Ever");
+  
+      var foodItem = {
+        name: "Kouign Amann",
+        price: "6.49",
+        type: "breakfast"
+      };
+  
+      var foodConfirmation = checkForFood(restaurant, foodItem);
+  
+      assert.equal(foodConfirmation, "Sorry, we aren't serving Kouign Amann today.");
     });
   });
 });

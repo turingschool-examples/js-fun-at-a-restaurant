@@ -3,5 +3,6 @@
 module.exports = {
   // createRestaurant, 
   // addMenuItem,
-  // removeMenuItem
+  // removeMenuItem,
+  // checkForFood
 }
