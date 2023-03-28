@@ -1,6 +1,9 @@
+function takeOrder(order, ticket){
+  ticket.push(order)
+}
 
 module.exports = {
-  // takeOrder,
+  takeOrder,
   // refundOrder,
   // listItems,
   // searchOrder

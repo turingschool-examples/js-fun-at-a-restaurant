@@ -10,11 +10,11 @@ var {
 
 describe("order.js", function() {
   describe("takeOrder", function() {
-    it.skip("should be a function", function() {
+    it("should be a function", function() {
       assert.isFunction(takeOrder);
     });
 
-    it.skip("should add new orders to an order type list", function() {
+    it("should add new orders to an order type list", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",
@@ -40,7 +40,7 @@ describe("order.js", function() {
       assert.equal(deliveryOrders[1], order2);
     });
 
-    it.skip("should add another order to an order type list", function () {
+    it("should add another order to an order type list", function () {
 
       var order1 = {
         orderNumber: 1,
