@@ -3,31 +3,37 @@ function nameMenuItem(name) {
 }
 
 function createMenuItem(name, price, meal) {
- return {
-  name: name,
-  price: price,
-  type: meal
- }
+  var menuItem = {
+    name: name,
+    price: price,
+    type: meal
+  }
+  return menuItem
 }
 
-function addIngredients(toAdd, dataVar){
+function addIngredients(toAdd, dataVar) {
   ingredients = dataVar
 
-  if(!ingredients.includes(toAdd)){
+  if (!ingredients.includes(toAdd)) {
     ingredients.push(toAdd)
   }
 }
 
-function formatPrice(price){
+function formatPrice(price) {
   return `$${price}`
 }
 
-function decreasePrice(price){
-  return (price * 90)/100  
+function decreasePrice(price) {
+  return (price * 90) / 100
 }
 
-function createRecipe(){
-
+function createRecipe(title, ingredients, meal) {
+var recipe = {
+  title: title,
+  ingredients: ingredients,
+  type: meal
+}
+return recipe
 }
 
 
@@ -37,6 +43,7 @@ module.exports = {
   addIngredients,
   formatPrice,
   decreasePrice,
+
   createRecipe
 }
 
