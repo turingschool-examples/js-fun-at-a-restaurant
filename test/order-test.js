@@ -191,7 +191,7 @@ describe("order.js", function() {
     });
   });
 
-  describe("listOrders", function() {
+  describe("listItems", function() {
     it.skip("should be a function", function () {
       assert.isFunction(listItems);
     });
