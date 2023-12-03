@@ -11,7 +11,7 @@ function createMenuItem(itemName, itemPrice, itemType){
     price: itemPrice, 
     type: itemType
   }
-  return menuItem;
+  return menuItem; 
 }
 // Test requires createMenuItem to be a function. 
 // Based on test, createMenuItem should hold 3 parameters, which 
@@ -68,7 +68,7 @@ return recipe;
 // variable recipe is an object, with key-value pair of title-title, 
 // ingredients-ingredients, and type-type. Based on the assertions, we
 // know that you can return the title, ingredients, and type by 
-// dot notation. 
+// dot notation!
 
 module.exports = {
   nameMenuItem,
